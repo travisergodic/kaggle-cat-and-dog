@@ -7,6 +7,16 @@ Kaggle **[Dog v.s. Cat competition](https://www.kaggle.com/competitions/dogs-vs-
     <img src=./assets/cat.1.jpg height="224" width="224"/><img src=./assets/dog.12486.jpg height="224" width="224"/>
 </center>
 
+## Model & Performance
+1. **Model**: ResNet50
+2. **Train & Validation ratio**: 0.85: 0.15
+3. **Performance**
+   + **accuracy**: 99.25%
+   + **recall**: 99.04%
+   + **precision**: 99.46%
+   + **auc**: 99.97%
+
+
 ## Resource
 1. **Environment**: `Linux`
 2. **Python version**: `3.10.12`

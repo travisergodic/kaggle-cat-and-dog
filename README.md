@@ -34,7 +34,7 @@ Kaggle **[Dog v.s. Cat competition](https://www.kaggle.com/competitions/dogs-vs-
    ```
 
 ## Command Line Interface
-1. **Train image classifier**
+1. **Train**: Train image classifier.
     ```
     python tools/train.py --config_file ${config_file} \
                           --exp_name ${exp_name} \
@@ -44,10 +44,10 @@ Kaggle **[Dog v.s. Cat competition](https://www.kaggle.com/competitions/dogs-vs-
                           --lr ${lr} \
                           --weight_decay ${weight_decay} \ 
                           --weight ${weight}
-                          [-- adam] \ 
-                          [-- adamw]
+                          [--adam] \ 
+                          [--adamw]
     ```
-    + `config_file`: Training configuration file. File contains model confiiguration, training strategy, etc. All config files are in `configs/` folder.
+    + `config_file`: Training configuration file. File contains model confiiguration, training strategy, etc. Configuration files are in `configs/` folder.
     + `exp_name`: The name of current experiemnt. Training aritfacts (model weights, ROC graph, confusion matrix graph, performance report, etc) will be save in `checkpoints/{exp_name}` folder.  
     + `img_dir`: Folder containing all training images.
     + `test_ratio`: Validation set ratio.
@@ -55,8 +55,8 @@ Kaggle **[Dog v.s. Cat competition](https://www.kaggle.com/competitions/dogs-vs-
     + `lr`: Learning rate.
     + `adam`: Use Adam optimizer during training.
     + `adamw`: Use AdamW optimizer during training.
-    + `weight_decay`: weight_decay regularization.
-    + `weights`: Pretained model weights path.
+    + `weight_decay`: Weight_decay regularization.
+    + `weights`: Pretained model weight path.
 
 2. **Inference**: Predict image categories in the folder.
     ```
@@ -72,7 +72,7 @@ Kaggle **[Dog v.s. Cat competition](https://www.kaggle.com/competitions/dogs-vs-
     + `weight`: Pretained model weights path.
     + `save_path`: Path to inference result file.
 
-3. **Evaluate**: Testing the model performance.
+3. **Evaluate**: Evaluate the model performance.
     ```
     python tools/evaluate.py --config_file ${config_file} \
                               --csv_path ${csv_path} \ 

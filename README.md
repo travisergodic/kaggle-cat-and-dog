@@ -69,8 +69,8 @@ Kaggle **[Dog v.s. Cat competition](https://www.kaggle.com/competitions/dogs-vs-
     + `config_file`: Configuration file for inference.
     + `img_dir`: Folder containing all images to be predicted.
     + `bs`: Inference batch size.
-    + `weight`: Pretained model weights path.
-    + `save_path`: Path to inference result file.
+    + `weight`: Pretained model weight path.
+    + `save_path`: Prediction result will save to this file.
 
 3. **Evaluate**: Evaluate the model performance.
     ```
@@ -81,12 +81,12 @@ Kaggle **[Dog v.s. Cat competition](https://www.kaggle.com/competitions/dogs-vs-
                               --weight ${weight} \
                               --save_path ${save_path}
     ```
-    + `config_file`: Configuration file for inference.
-    + `csv_path`: csv file containing testing image labels. csv_file should contain `name`(image name) & `label`(image category) columns. 
-    + `img_dir`: Folder containing all images to be infered.
+    + `config_file`: Configuration file for evaluation.
+    + `csv_path`: csv file containing testing image names and labels. csv_file should contain `name`(image name) & `label`(image category) columns. [Example](./assets/validation_set.csv)
+    + `img_dir`: Folder containing all images to be predicted.
     + `bs`: Inference batch size.
-    + `weight`: Pretained model weights path.
-    + `save_dir`: Path to save artifacts.
+    + `weight`: Pretained model weight path.
+    + `save_dir`: Path to save evaluation artifacts, including ROC graph, confusion matrix graph.
 
 
 ## [Colab Practice](https://colab.research.google.com/drive/1nWa3I6uud9Q4J_1d0LpnZxQOnUS9_5HG#scrollTo=9qGRZfH90CMH)
